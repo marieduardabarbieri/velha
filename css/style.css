@@ -2,3 +2,41 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    display: flez;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+h1{
+    text-align: center;
+}
+
+.JogoVelha{
+    display: grid;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid black;
+    grid-template-columns: 1fr 1fr 1fr; 
+    /*cria três espaços com tamanhos iguais que aumentam e diminuem de acordo com o espaço disponível*/
+}
+
+.JogoVelha button{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 50px;
+    background-color: white;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
