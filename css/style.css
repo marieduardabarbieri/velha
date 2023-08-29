@@ -4,7 +4,7 @@
 }
 
 body{
-    display: flez;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -22,7 +22,6 @@ h1{
 
 .JogoVelha{
     display: grid;
-    width: 50%;
     text-align: center;
     justify-content: center;
     border: 1px solid black;
