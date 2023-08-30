@@ -4,3 +4,5 @@ window.onload = () => {
         navigator.serviceWorker.register("./sw.js");
     }
 }
+
+let JogadorVez =  document.querySelector(".JogadorVez");
