@@ -18,8 +18,8 @@ let posicoesPossiveis =[
     [1,4,7],
     [2,5,8],
     [3,6,9],
-    [3,5,7]
-]
+    [3,5,7],
+];
 
 function comecar(){
     seleciona = [];
@@ -58,7 +58,7 @@ function check() { //função de checar, revisa quem jogou por ultimo e mostra c
 
     for(pos1 of posicoesPossiveis) { //for de verificação da vez do jogador
         if(pos1.every((item) => quadradinhos.icludes(item))){
-        alert("O Jogador" + JogadorVez + "venceu");
+        alert("O Jogador'" + JogadorVez + "'venceu");
         comecar();
         return;
         }
