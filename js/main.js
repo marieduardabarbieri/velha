@@ -35,7 +35,7 @@ function comecar(){
 comecar();
 
 function newMove(e) { //função dos botoões
-    const index = e.target.getAttribute("id");
+    const index = e.target.getAttribute("data-i");
     e.target.innerHTML = x;
     e.target.removeEventListener("click", newMove);
     seleciona[index] = x;
