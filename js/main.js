@@ -48,7 +48,7 @@ function newMove(e) { //função dos botoões
     JogadorVez.innerHTML = `Jogador é: ${x}`;
 }
 
-function check() { //função de checar, revisa quem jogou por ultimo
+function check() { //função de checar, revisa quem jogou por ultimo e mostra caso de empate
     let ultimoJogador = x === "X" ? "O" : "X";
 
     const quadradinhos = seleciona
@@ -56,11 +56,17 @@ function check() { //função de checar, revisa quem jogou por ultimo
     .filter((item) => item[0] === ultimoJogador)
     .map((item) => item[1])
 
-    for(pos1 of posicoesPossiveis) {
+    for(pos1 of posicoesPossiveis) { //for de verificação da vez do jogador
         if(pos1.every((item) => quadradinhos.icludes(item))){
         alert("O Jogador" + JogadorVez + "venceu");
         comecar();
         return;
         }
+    }
+
+    if(seleciona.filter((item) => item).length === 9){//caso de empate
+        alert("Empatou!!");
+        comecar();
+        return;
     }
 }
