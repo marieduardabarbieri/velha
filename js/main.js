@@ -35,7 +35,7 @@ function comecar(){
 comecar();
 
 function newMove(e) { //função dos botoões
-    const index = e.target.getAttribute("data-i");
+    const index = e.target.getAttribute("id");
     e.target.innerHTML = x;
     e.target.removeEventListener("click", newMove);
     seleciona[index] = x;
@@ -57,7 +57,7 @@ function check() { //função de checar, revisa quem jogou por ultimo e mostra c
     .map((item) => item[1])
 
     for(pos1 of posicoesPossiveis) { //for de verificação da vez do jogador
-        if(pos1.every((item) => quadradinhos.icludes(item))){
+        if(pos1.every((item) => quadradinhos.includes(item))){
         alert("O Jogador'" + ultimoJogador + "'venceu");
         comecar();
         return;
