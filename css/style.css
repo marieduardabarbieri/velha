@@ -12,12 +12,12 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 h1{
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0px;
 }
 
 .JogoVelha{
@@ -25,7 +25,11 @@ h1{
     text-align: center;
     justify-content: center;
     border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px 10px;
+    font-family: cursive;
     grid-template-columns: 1fr 1fr 1fr; 
+    background-color: rgba(0, 67, 126, 0.859);
     /*cria três espaços com tamanhos iguais que aumentam e diminuem de acordo com o espaço disponível*/
 }
 
@@ -38,4 +42,9 @@ h1{
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+#vez{
+    text-align: center;
+    margin-top: 15px;
 }
