@@ -10,7 +10,7 @@ let JogadorVez =  document.querySelector(".JogadorVez"); //Retorna o primeiro el
 let seleciona;
 let x = "X";
 
-let posicoesPossiveis =[
+let posicoesPossiveis = [
     [1,2,3],
     [4,5,6],
     [7,8,9],
@@ -58,7 +58,7 @@ function check() { //função de checar, revisa quem jogou por ultimo e mostra c
 
     for(pos1 of posicoesPossiveis) { //for de verificação da vez do jogador
         if(pos1.every((item) => quadradinhos.icludes(item))){
-        alert("O Jogador'" + JogadorVez + "'venceu");
+        alert("O Jogador'" + ultimoJogador + "'venceu");
         comecar();
         return;
         }
