@@ -31,3 +31,19 @@ function comecar(){
       item.addEventListener("click", newMove)
     })
 }
+
+comecar();
+
+function newMove(e) { //função dos botoões
+    const index = e.target.getAttribute("id");
+    e.target.innerHTML = x;
+    e.target.removeEventListener("click", newMove);
+    seleciona[index] = x;
+
+    setTimeout(() => {
+        check();
+    }, [100]);
+
+    x = x === "X" ? "O" : "X";
+    JogadorVez.innerHTML = `Jogador é: ${x}`;
+}
