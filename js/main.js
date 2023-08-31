@@ -48,11 +48,19 @@ function newMove(e) { //função dos botoões
     JogadorVez.innerHTML = `Jogador é: ${x}`;
 }
 
-function check(){
+function check() { //função de checar, revisa quem jogou por ultimo
     let ultimoJogador = x === "X" ? "O" : "X";
 
     const quadradinhos = seleciona
     .map((item, i) => [item, i])
     .filter((item) => item[0] === ultimoJogador)
     .map((item) => item[1])
+
+    for(pos1 of posicoesPossiveis) {
+        if(pos1.every((item) => quadradinhos.icludes(item))){
+        alert("O Jogador" + JogadorVez + "venceu");
+        comecar();
+        return;
+        }
+    }
 }
