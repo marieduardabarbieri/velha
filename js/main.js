@@ -47,3 +47,12 @@ function newMove(e) { //função dos botoões
     x = x === "X" ? "O" : "X";
     JogadorVez.innerHTML = `Jogador é: ${x}`;
 }
+
+function check(){
+    let ultimoJogador = x === "X" ? "O" : "X";
+
+    const quadradinhos = seleciona
+    .map((item, i) => [item, i])
+    .filter((item) => item[0] === ultimoJogador)
+    .map((item) => item[1])
+}
