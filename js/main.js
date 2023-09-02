@@ -14,6 +14,7 @@ let posicoesPossiveis = [
 
 let JogadorVez =  document.querySelector(".JogadorVez");//Retorna o primeiro elemento dentro do documento
 let empate =  document.getElementById("empate"); 
+let vitoria =  document.getElementById("vitoria"); 
 let clica;
 let x = "X";
 
@@ -51,16 +52,15 @@ function checaQuad() { //função de checar, revisa quem jogou por ultimo e most
 
     for(pos1 of posicoesPossiveis) { //for de verificação da vez do jogador
         if(pos1.every((quadrados) => quadradinhos.includes(quadrados))){
-        alert("O Jogador " + ultimoJogador + " venceu!!");
+        vitoria.innerHTML = "O jogador " +ultimoJogador+ " ganhou";
         comecar();
-        return;
-        
-        } setInterval(() => location.reload(), 5000)
+        return setTimeout(() => location.reload(), 4000);
+        } 
     }
 
     if(clica.filter((quadrados) => quadrados).length === 9){//caso de empate
-        empate.innerHTML = "O jogo empatou"
+        empate.innerHTML = "O jogo empatou. Recomece agora"
         comecar();
-        return;
-    } setInterval(() => location.reload(), 5000)
+        return setTimeout(() => location.reload(), 4000);
+    } 
 }

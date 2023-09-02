@@ -50,7 +50,7 @@ h2{
     border-radius: 3px;
 }
 
-#vez{
+#vez, #empate, #vitoria{
     text-align: center;
     margin-top: 15px;
 }
