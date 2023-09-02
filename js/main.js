@@ -52,16 +52,14 @@ function checaQuad() { //função de checar, revisa quem jogou por ultimo e most
 
     for(pos1 of posicoesPossiveis) { //for de verificação da vez do jogador
         if(pos1.every((quadrados) => quadradinhos.includes(quadrados))){
-        vitoria.innerHTML = ("O jogador " + ultimoJogador + " ganhou. Reiniciando em 3,2,1...");
+        vitoria.innerHTML = ("O jogador " + ultimoJogador + " ganhou. Espere reiniciar: 3,2,1...");
         comecar();
         return setTimeout(() => location.reload(), 3000); 
         } 
         if(clica.filter((quadrados) => quadrados).length === 9){//caso de empate
-            empate.innerHTML = ("O jogo empatou. Reiniciando em 3,2,1..");
+            empate.innerHTML = ("O jogo empatou. Espere reiniciar: 3,2,1..");
             comecar();
             return  setTimeout(() => location.reload(), 3000);
         } 
     }
-
-   
 }
