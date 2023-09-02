@@ -7,17 +7,24 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(231, 238, 246);
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    padding: 20px;
+    margin-top: 50px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 25px rgb(11, 37, 82);
 }
 
 h1{
     text-align: center;
-    margin: 20px 0px;
+}
+
+h2{
+    margin-bottom: 10px;
 }
 
 .JogoVelha{
@@ -29,7 +36,6 @@ h1{
     padding: 10px 10px;
     font-family: cursive;
     grid-template-columns: 1fr 1fr 1fr; 
-    background-color: rgba(0, 67, 126, 0.859);
     /*cria três espaços com tamanhos iguais que aumentam e diminuem de acordo com o espaço disponível*/
 }
 

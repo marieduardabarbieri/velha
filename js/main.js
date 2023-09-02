@@ -24,7 +24,7 @@ let posicoesPossiveis = [
 function comecar(){
     seleciona = [];
 
-    JogadorVez.innerHTML = `A vez é do jogador: ${x}`;
+    JogadorVez.innerHTML = `Quem joga é: ${x}`;
 
     document.querySelectorAll(".JogoVelha button").forEach((item) => { //seleciona tudos os botoes da div Jogovelha 
       item.innerHTML = "";  //inicia com o innerHTML vazio, pq ninguem comecou
@@ -45,7 +45,7 @@ function newMove(e) { //função dos botoões
     }, [100]);
 
     x = x === "X" ? "O" : "X";
-    JogadorVez.innerHTML = `A vez é do jogador: ${x}`;
+    JogadorVez.innerHTML = `Quem joga é: ${x}`;
 }
 
 function check() { //função de checar, revisa quem jogou por ultimo e mostra caso de empate
